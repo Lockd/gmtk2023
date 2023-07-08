@@ -7,5 +7,5 @@ using UnityEngine.UI;
 public class InventoryItem : ScriptableObject
 {
     public string itemName;
-    public Image UIImage;
+    public Sprite UIImage;
 }
