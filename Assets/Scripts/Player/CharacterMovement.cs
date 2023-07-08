@@ -9,10 +9,12 @@ public class CharacterMovement : MonoBehaviour
     private Door targetDoor;
     private Collider2D colliderToDisable;
     private Rigidbody2D rb;
+    private Animator animator;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     public void OnMove(float xDirection)
@@ -32,7 +34,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (targetDoor == null) return;
 
-        // TODO disable controls, play animation
         targetDoor.OnEnter(transform);
+        animator.SetTrigger("fadeIn");
     }
 }

@@ -13,6 +13,8 @@ public class Door : MonoBehaviour
     {
         // TODO play animation
         character.position = linkedDoor.transform.position;
+
+        CameraSwitcher.Instance.SetLookAt(linkedDoor.transform, character);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
