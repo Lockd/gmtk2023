@@ -5,9 +5,14 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField] private Transform spawnPoint;
-    [SerializeField] private Door linkedDoor;
+    public Door linkedDoor;
     [SerializeField] private GameObject hintText;
     private CharacterMovement movement;
+
+    private void Start()
+    {
+        hintText.SetActive(false);
+    }
 
     public void OnEnter(Transform character)
     {
@@ -17,7 +22,7 @@ public class Door : MonoBehaviour
         CameraSwitcher.Instance.SetLookAt(linkedDoor.transform, character);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
