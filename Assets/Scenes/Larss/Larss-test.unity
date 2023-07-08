@@ -248,6 +248,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 102008015}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &120749204 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4729339495540830706, guid: 500f17b2a7f3b71478aae24dd0896d06,
+    type: 3}
+  m_PrefabInstance: {fileID: 7166545666542012775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &212964782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030623326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.31, y: 3.67, z: -20}
+  m_LocalPosition: {x: 8.31, y: 4.67, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1949,7 +1955,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 0.539231, g: 0.8252759, b: 0.9622642, a: 1}
+  m_Color: {r: 0.16625132, g: 0.18134299, b: 0.18867922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2759,7 +2765,7 @@ PrefabInstance:
     - target: {fileID: 3384341923078406727, guid: 500f17b2a7f3b71478aae24dd0896d06,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.33
+      value: 0.66999996
       objectReference: {fileID: 0}
     - target: {fileID: 3384341923078406727, guid: 500f17b2a7f3b71478aae24dd0896d06,
         type: 3}
@@ -2799,6 +2805,21 @@ PrefabInstance:
     - target: {fileID: 3384341923078406727, guid: 500f17b2a7f3b71478aae24dd0896d06,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947214889746480445, guid: 500f17b2a7f3b71478aae24dd0896d06,
+        type: 3}
+      propertyPath: _renderer
+      value: 
+      objectReference: {fileID: 120749204}
+    - target: {fileID: 4147949020880299834, guid: 500f17b2a7f3b71478aae24dd0896d06,
+        type: 3}
+      propertyPath: m_Name
+      value: Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729339495540830706, guid: 500f17b2a7f3b71478aae24dd0896d06,
+        type: 3}
+      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5845200878194935820, guid: 500f17b2a7f3b71478aae24dd0896d06,

@@ -11,6 +11,7 @@ public class CharacterMovement : MonoBehaviour
     private Collider2D colliderToDisable;
     private Rigidbody2D rb;
     private Animator animator;
+    [SerializeField] private SpriteRenderer _renderer;
     private bool canMove = true;
     public bool isHidden = false;
 
@@ -23,6 +24,8 @@ public class CharacterMovement : MonoBehaviour
     public void OnMove(float xDirection)
     {
         if (!canMove) return;
+
+        if (xDirection != 0f) _renderer.flipX = xDirection > 0f;
 
         // TODO handle animation and sprite flipping
         Vector2 movement = new Vector2(xDirection, 0f) * moveSpeed * Time.deltaTime + new Vector2(0f, rb.velocity.y);

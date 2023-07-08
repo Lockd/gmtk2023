@@ -52,6 +52,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1000
   accelerationSpeed: 0
+  targetDoor: {fileID: 0}
+  targetHidableObject: {fileID: 0}
+  isHidden: 0
 --- !u!114 &5845200878194935820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,8 +149,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.014094293, y: -0.010750711}
-  m_Size: {x: 1.007394, y: 1.9765619}
+  m_Offset: {x: 0.2422638, y: -0.12061858}
+  m_Size: {x: 2.985013, y: 3.8822665}
   m_Direction: 0
 --- !u!95 &738434238911727822
 Animator:
@@ -196,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 4147949020880299834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.9842, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3384341923078406727}
@@ -243,8 +246,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61d84fc3d78106a499f88060e7da224b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
