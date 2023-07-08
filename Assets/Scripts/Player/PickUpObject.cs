@@ -7,7 +7,7 @@ public class PickUpObject : MonoBehaviour
 {
     [SerializeField] private float range = 2f;
     [SerializeField] private GameObject hintText;
-    // TODO add UI SO
+    public InventoryItem inventoryItem;
     private bool shouldDisplayHint;
     private BoxCollider2D boxCollider;
 

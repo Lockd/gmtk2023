@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<string> inventory;
+    public List<InventoryItem> inventory;
     [SerializeField] private PickUpObject targetObject;
 
     private static Inventory _instance;
@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        inventory = new List<string>();
+        inventory = new List<InventoryItem>();
     }
 
     public void OnChangeTarget(PickUpObject pickUpObject)
@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour
     public void AddItemToInventory(PickUpObject itemToAdd)
     {
         // TODO should not be game object, use SO for rendering UI
-        inventory.Add(itemToAdd.gameObject.name);
+        inventory.Add(itemToAdd.inventoryItem);
         Destroy(itemToAdd.gameObject);
     }
 
