@@ -1,13 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    public static CharacterMovement instance;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float accelerationSpeed;
     public Door targetDoor;
     public HideableObject targetHidableObject;
+    private Transform transform;
     private Collider2D colliderToDisable;
     private Rigidbody2D rb;
     private Animator animator;
@@ -15,8 +19,16 @@ public class CharacterMovement : MonoBehaviour
     private bool canMove = true;
     public bool isHidden = false;
 
+    private void Awake() {
+        if (instance != null && instance != this)
+            Destroy(this);
+        else
+            instance = this;
+    }
+
     private void Start()
     {
+        transform = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -31,6 +43,20 @@ public class CharacterMovement : MonoBehaviour
         Vector2 movement = new Vector2(xDirection, 0f) * moveSpeed * Time.deltaTime + new Vector2(0f, rb.velocity.y);
 
         rb.velocity = movement;
+    }
+
+    internal void GoTo(GameObject destination) {
+        float xDestination = destination.transform.position.x;
+        float length = Math.Abs(xDestination - transform.position.x);
+        float duration = length / moveSpeed;
+        transform.DOMoveX(xDestination, duration).OnComplete(() => OnDestinationReached(destination));
+    }
+
+    private void OnDestinationReached(GameObject destination) {
+        Door door = destination.GetComponent<Door>();
+        if(door != null)
+            door.OnEnter(transform);
+        AIManager.instance.OnRouteDestinationReached();
     }
 
     public void SetTargetDoor(Door door)
