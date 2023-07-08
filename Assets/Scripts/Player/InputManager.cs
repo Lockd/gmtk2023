@@ -18,10 +18,15 @@ public class InputManager : MonoBehaviour
         float xDirection = Input.GetAxis("Horizontal");
         characterMovement.OnMove(xDirection);
 
-        // Pickup Logic
         if (Input.GetKeyDown(KeyCode.E))
         {
+            // TODO this logic is hacky? 
+
+            // Pickup Logic
             Inventory.Instance.OnPickUp();
+
+            // Door Logic
+            characterMovement.OnEnterDoor();
         }
 
         // TODO Hide logic
