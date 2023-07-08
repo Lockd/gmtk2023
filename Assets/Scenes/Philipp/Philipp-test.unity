@@ -1192,7 +1192,7 @@ MonoBehaviour:
   - {fileID: 1438387930}
   - {fileID: 2018311897}
   - {fileID: 864346489}
-  waitingTime: 0
+  waitingTime: 1
 --- !u!1001 &915399428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1205,6 +1205,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Inhabitant
+      objectReference: {fileID: 0}
+    - target: {fileID: 188039565994039446, guid: 445067c00a2bfd44b90593698de9c783,
+        type: 3}
+      propertyPath: m_TagString
+      value: Inhabitant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692462701572389021, guid: 445067c00a2bfd44b90593698de9c783,
+        type: 3}
+      propertyPath: backtrackingIndex
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2692462701572389021, guid: 445067c00a2bfd44b90593698de9c783,
         type: 3}
@@ -1289,7 +1299,7 @@ PrefabInstance:
     - target: {fileID: 3947214889746480445, guid: 445067c00a2bfd44b90593698de9c783,
         type: 3}
       propertyPath: moveSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1827,7 +1837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   route:
   - {fileID: 1131316947}
-  waitingTime: 2
+  waitingTime: 1
 --- !u!1 &1438387930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3177926638194636694, guid: 3ade95c966c0dfe44a12750de2f4d08d,
@@ -2176,7 +2186,7 @@ MonoBehaviour:
   route:
   - {fileID: 1698473428}
   - {fileID: 1502648847}
-  waitingTime: 5
+  waitingTime: 1
 --- !u!4 &1503515017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5791819688751117126, guid: 3ade95c966c0dfe44a12750de2f4d08d,
@@ -3043,7 +3053,7 @@ MonoBehaviour:
   route:
   - {fileID: 1716757737}
   - {fileID: 1829129604}
-  waitingTime: 3
+  waitingTime: 1
 --- !u!4 &1829129606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2136614290240335524, guid: e18663d94b40efd4a936a8e51a1b74e2,
