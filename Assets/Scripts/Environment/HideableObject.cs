@@ -46,7 +46,7 @@ public class HideableObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            hintText.SetActive(true);
+            hintText.SetActive(false);
             movement.SetTargetHidableObject(null);
         }
     }

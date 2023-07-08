@@ -10,11 +10,11 @@ public class MainMenuBehaviour : MonoBehaviour
 
     public Button settingsButton;
 
-    public GameObject settingsMenu;
+    public GameObject settingsPosition;
 
     public Camera mainCamera;
 
-    public GameObject settingsImage;
+    public GameObject settingsUI;
 
     MenuCameraMovement thisCamera;
     // Start is called before the first frame update
@@ -30,12 +30,12 @@ public class MainMenuBehaviour : MonoBehaviour
 
     void OpenSettingssMenu()
     {
-        settingsImage.SetActive(true);
-        gameObject.SetActive(false);
-        //mainCamera.transform.position = new Vector3(savesImage.transform.position.x, savesImage.transform.position.y, mainCamera.transform.position.z);
-       // thisCamera.isMoving = true;
-       // thisCamera.moveTo = settingsImage;
-        //thisCamera.direction = -1;
+        //settingsUI.SetActive(true);
+        //gameObject.SetActive(false);
+        //mainCamera.transform.position = new Vector3(settingsPosition.transform.position.x, settingsPosition.transform.position.y, mainCamera.transform.position.z);
+        thisCamera.isMoving = true;
+        thisCamera.moveTo = settingsPosition;
+        thisCamera.direction = 1;
         /*
         savesMenu.SetActive(true);
         gameObject.SetActive(false);
