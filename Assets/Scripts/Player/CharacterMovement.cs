@@ -11,7 +11,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float accelerationSpeed;
     public Door targetDoor;
     public HideableObject targetHidableObject;
-    private Transform transform;
+    public GameObjective targetObjective;
     private Collider2D colliderToDisable;
     private Rigidbody2D rb;
     private Animator animator;
@@ -19,7 +19,8 @@ public class CharacterMovement : MonoBehaviour
     private bool canMove = true;
     public bool isHidden = false;
 
-    private void Awake() {
+    private void Awake()
+    {
         if (instance != null && instance != this)
             Destroy(this);
         else
@@ -28,7 +29,6 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
-        transform = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -45,17 +45,20 @@ public class CharacterMovement : MonoBehaviour
         rb.velocity = movement;
     }
 
-    internal void GoTo(GameObject destination) {
+    internal void GoTo(GameObject destination)
+    {
         float xDestination = destination.transform.position.x;
         float length = Math.Abs(xDestination - transform.position.x);
         float duration = length / moveSpeed;
         transform.DOMoveX(xDestination, duration).OnComplete(() => OnDestinationReached(destination));
     }
 
-    private void OnDestinationReached(GameObject destination) {
+    private void OnDestinationReached(GameObject destination)
+    {
         Door door = destination.GetComponent<Door>();
-        if(door != null)
+        if (door != null)
             door.OnEnter(transform);
+
         AIManager.instance.OnRouteDestinationReached();
     }
 
@@ -75,6 +78,18 @@ public class CharacterMovement : MonoBehaviour
     public void SetTargetHidableObject(HideableObject hideableObject)
     {
         targetHidableObject = hideableObject;
+    }
+
+    public void SetTargetGameObjective(GameObjective targetObjective)
+    {
+        this.targetObjective = targetObjective;
+    }
+
+    public void OnInteractWithGameObjective()
+    {
+        if (targetObjective == null) return;
+
+        targetObjective.OnInteract();
     }
 
     public void OnChangeHiddenStatus()

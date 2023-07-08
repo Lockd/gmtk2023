@@ -29,6 +29,7 @@ public class InputManager : MonoBehaviour
         Inventory.Instance.OnPickUp();
         characterMovement.OnEnterDoor();
         characterMovement.OnChangeHiddenStatus();
+        characterMovement.OnInteractWithGameObjective();
     }
 
     private void FixedUpdate()
