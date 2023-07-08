@@ -54,6 +54,7 @@ MonoBehaviour:
   accelerationSpeed: 0
   targetDoor: {fileID: 0}
   targetHidableObject: {fileID: 0}
+  _renderer: {fileID: 0}
   isHidden: 0
 --- !u!114 &5845200878194935820
 MonoBehaviour:
@@ -105,7 +106,7 @@ Rigidbody2D:
   m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

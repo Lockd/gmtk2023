@@ -8,6 +8,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float accelerationSpeed;
     public Door targetDoor;
     public HideableObject targetHidableObject;
+    public GameObjective targetObjective;
     private Collider2D colliderToDisable;
     private Rigidbody2D rb;
     private Animator animator;
@@ -49,6 +50,18 @@ public class CharacterMovement : MonoBehaviour
     public void SetTargetHidableObject(HideableObject hideableObject)
     {
         targetHidableObject = hideableObject;
+    }
+
+    public void SetTargetGameObjective(GameObjective targetObjective)
+    {
+        this.targetObjective = targetObjective;
+    }
+
+    public void OnInteractWithGameObjective()
+    {
+        if (targetObjective == null) return;
+
+        targetObjective.OnInteract();
     }
 
     public void OnChangeHiddenStatus()
