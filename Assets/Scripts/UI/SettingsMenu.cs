@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SettingsMenuManager : MonoBehaviour
+public class SettingsMenu : MonoBehaviour
 {
     public Button backButton;
 
@@ -20,12 +20,6 @@ public class SettingsMenuManager : MonoBehaviour
 
         thisCamera = mainCamera.GetComponent<MenuCameraMovement>();
         backButton.onClick.AddListener(ReturnToMainMenu);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void ReturnToMainMenu()

@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 310780046}
   - component: {fileID: 310780045}
   m_Layer: 5
-  m_Name: SFX
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,7 +989,7 @@ GameObject:
   - component: {fileID: 958850924}
   - component: {fileID: 958850923}
   m_Layer: 5
-  m_Name: Sound
+  m_Name: SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1142,7 +1142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985426217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 205, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1433,7 +1433,7 @@ GameObject:
   - component: {fileID: 1131377035}
   - component: {fileID: 1131377034}
   m_Layer: 5
-  m_Name: Music
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2411,7 +2411,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2051477364}
+        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
+        m_MethodName: MusicVolumeLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1645765898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,7 +2680,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2051477364}
+        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
+        m_MethodName: MasterVolumeLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1682477745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,7 +2864,7 @@ GameObject:
   - component: {fileID: 1782064768}
   - component: {fileID: 1782064767}
   m_Layer: 5
-  m_Name: Music
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3190,7 +3214,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2051477364}
+        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
+        m_MethodName: SFXVolumeLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1871437962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,6 +3314,7 @@ GameObject:
   - component: {fileID: 2051477360}
   - component: {fileID: 2051477359}
   - component: {fileID: 2051477363}
+  - component: {fileID: 2051477364}
   m_Layer: 5
   m_Name: Settings_Menu
   m_TagString: Untagged
@@ -3382,13 +3419,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 2051477357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb84fdbb392b38542a0cd58e88e7b52f, type: 3}
+  m_Script: {fileID: 11500000, guid: d74dd60a88446be4ea9ea647a1da1b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backButton: {fileID: 2126673729}
   menuUI: {fileID: 1552887813}
   menuPosition: {fileID: 140621383}
   mainCamera: {fileID: 985426219}
+--- !u!114 &2051477364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051477357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7f08d223f062c488088b1720e73998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2105837199
 GameObject:
   m_ObjectHideFlags: 0
