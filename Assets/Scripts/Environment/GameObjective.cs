@@ -26,11 +26,13 @@ public class GameObjective : MonoBehaviour
 
     public void OnInteract()
     {
+        if (isComplete) return;
         // TODO play correct animaion?
         if (Inventory.Instance.inventory.Contains(requiredItem) || requiredItem == null)
         {
             if (successMessage != null) PlayerBubbles.Instance.AddBubble(successMessage);
             spriteRenderer.sprite = successImage;
+            isComplete = true;
         }
         else
         {
@@ -40,7 +42,7 @@ public class GameObjective : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isComplete)
         {
             if (movement == null) movement = other.GetComponent<CharacterMovement>();
 
