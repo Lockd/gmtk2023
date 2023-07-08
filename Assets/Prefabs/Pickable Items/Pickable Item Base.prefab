@@ -205,7 +205,7 @@ Transform:
   m_Children:
   - {fileID: 931171330175281218}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8598840900917185702
 SpriteRenderer:
@@ -274,6 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 5
   hintText: {fileID: 2382977904679883073}
+  inventoryItem: {fileID: 11400000, guid: 2693bfd548ccfa445ae81bb6d97064f0, type: 2}
 --- !u!61 &5763139658981657487
 BoxCollider2D:
   m_ObjectHideFlags: 0
