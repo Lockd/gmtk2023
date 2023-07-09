@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public static CharacterMovement instance;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float accelerationSpeed;
     public Door targetDoor;
@@ -16,16 +15,8 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     [SerializeField] private SpriteRenderer _renderer;
-    private bool canMove = true;
+    public bool canMove;
     public bool isHidden = false;
-
-    private void Awake()
-    {
-        if (instance != null && instance != this)
-            Destroy(this);
-        else
-            instance = this;
-    }
 
     private void Start()
     {
@@ -37,7 +28,8 @@ public class CharacterMovement : MonoBehaviour
     {
         if (!canMove) return;
 
-        if (xDirection != 0f) _renderer.flipX = xDirection > 0f;
+        if (xDirection != 0f)
+            _renderer.flipX = xDirection > 0f;
 
         // TODO handle animation and sprite flipping
         Vector2 movement = new Vector2(xDirection, 0f) * moveSpeed * Time.deltaTime + new Vector2(0f, rb.velocity.y);
@@ -48,6 +40,7 @@ public class CharacterMovement : MonoBehaviour
     internal void GoTo(GameObject destination)
     {
         float xDestination = destination.transform.position.x;
+        _renderer.flipX = (xDestination - transform.position.x) < 0;
         float length = Math.Abs(xDestination - transform.position.x);
         float duration = length / moveSpeed;
         transform.DOMoveX(xDestination, duration).OnComplete(() => OnDestinationReached(destination));

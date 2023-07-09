@@ -6,9 +6,15 @@ using UnityEngine;
 public class AIManager : MonoBehaviour {
 
     public static AIManager instance { get; private set; }
+    CharacterMovement movementScript;
     public List<AITarget> targets;
     public int backtrackingIndex;
     public AIStates currentState { get; private set; }
+    public GameObject player;
+    public float FOVDistance = 10f;
+    public float FOVAngle = 90f;
+    private SpriteRenderer renderer;
+
 
     private int currentBacktrackingIndex;
     private bool pursuingTarget;
@@ -27,8 +33,11 @@ public class AIManager : MonoBehaviour {
     }
 
     private void Start() {
+        renderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        movementScript = GetComponent<CharacterMovement>();
         currentState = AIStates.Idle;
         currentBacktrackingIndex = backtrackingIndex;
+        StartCoroutine(CheckLineOfSight());
     }
 
     private void Update() {
@@ -50,7 +59,7 @@ public class AIManager : MonoBehaviour {
         pursuingTarget = true;
         AITarget target = targets[0];
         GameObject nextDestination = target.GetNextStop(currentState);
-        CharacterMovement.instance.GoTo(nextDestination);
+        movementScript.GoTo(nextDestination);
     }
 
     public void OnRouteDestinationReached() {
@@ -76,8 +85,9 @@ public class AIManager : MonoBehaviour {
         pursuingTarget = false;
     }
 
-    private void ScareInhabitant() {
+    public void ScareInhabitant() {
         currentState = AIStates.Scared;
+        pursuingTarget = false;
         ReverseTargets();
     }
 
@@ -89,6 +99,26 @@ public class AIManager : MonoBehaviour {
                 if (door != null) {
                     target.route[i] = door.linkedDoor.gameObject;
                 }
+            }
+        }
+    }
+
+    private IEnumerator CheckLineOfSight() {
+
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
+
+        while (true) {
+            yield return wait;
+            if (player.GetComponent<CharacterMovement>().isHidden)
+                continue;
+            Vector3 directionToPlayer = (player.transform.position - transform.position);
+            Vector2 lookingDirection = new Vector2(renderer.flipX ? -1f : 1f, 0f);
+            float angleToPlayer = Vector2.Angle(lookingDirection, directionToPlayer);
+            if (angleToPlayer > FOVAngle / 2) {
+                continue;
+            }
+            if (directionToPlayer.magnitude < FOVDistance) {
+                AIManager.instance.ScareInhabitant();
             }
         }
     }
