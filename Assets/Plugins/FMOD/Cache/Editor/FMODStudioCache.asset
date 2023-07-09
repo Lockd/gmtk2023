@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: fmod/Build/Desktop/Master Bank.strings.bank
   Name: Master Bank.strings
   StudioPath: bank:/Master Bank.strings
-  lastModified: 638245020574503335
+  lastModified: 638245228533375362
   FileSizes:
   - Name: Desktop
-    Value: 2320
+    Value: 2506
   Exists: 1
 --- !u!114 &-6530757638159462046
 MonoBehaviour:
@@ -74,6 +74,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6039895791702317131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Track_01/Heart_level
+  m_EditorClassIdentifier: 
+  Name: Heart_level
+  StudioPath: 
+  Min: 0
+  Max: 6
+  Default: 0
+  ID:
+    data1: 45181657
+    data2: 2883181584
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5295076071325596114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +179,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4298588449532602075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Win
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Win
+  Guid:
+    Data1: 629606131
+    Data2: 1075214540
+    Data3: 90720659
+    Data4: -1806859790
+  Banks:
+  - {fileID: 7730999805055906540}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8600
 --- !u!114 &-1721048047270149759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,12 +382,15 @@ MonoBehaviour:
   - {fileID: 7786906623364785457}
   - {fileID: 7400254793230978027}
   - {fileID: -1013314349215801830}
+  - {fileID: 6776884141212959054}
+  - {fileID: 796928091491286089}
+  - {fileID: -4298588449532602075}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7730999805055906540}
   StringsBanks:
   - {fileID: -7518464676347852132}
-  cacheTime: 638245020574503335
+  cacheTime: 638245228533375362
   cacheVersion: 131605
 --- !u!114 &478132354804910620
 MonoBehaviour:
@@ -365,6 +419,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
+--- !u!114 &796928091491286089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Track_01
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Track_01
+  Guid:
+    Data1: -1197215355
+    Data2: 1292779606
+    Data3: 1507232385
+    Data4: 1309322025
+  Banks:
+  - {fileID: 7730999805055906540}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6039895791702317131}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 340486
 --- !u!114 &1663113259023586671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,6 +690,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6776884141212959054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Lose
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Lose
+  Guid:
+    Data1: -1330154956
+    Data2: 1267781945
+    Data3: -1333585765
+    Data4: 836295739
+  Banks:
+  - {fileID: 7730999805055906540}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9427
 --- !u!114 &7400254793230978027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,10 +759,10 @@ MonoBehaviour:
   Path: fmod/Build/Desktop/Master Bank.bank
   Name: Master Bank
   StudioPath: bank:/Master Bank
-  lastModified: 638245020574478250
+  lastModified: 638245228533343723
   FileSizes:
   - Name: Desktop
-    Value: 1539104
+    Value: 4602848
   Exists: 1
 --- !u!114 &7786906623364785457
 MonoBehaviour:
