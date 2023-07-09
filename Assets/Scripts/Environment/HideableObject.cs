@@ -23,12 +23,13 @@ public class HideableObject : MonoBehaviour
 
     public void OnHide()
     {
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Lamp/Lamp_Possess");
         _renderer.color = hiddenColor;
     }
 
     public void OnLeave()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Lamp/Lamp_Unpossess");
         _renderer.color = normalColor;
     }
 

@@ -13,7 +13,7 @@ public class CharacterMovement : MonoBehaviour
     public GameObjective targetObjective;
     private Collider2D colliderToDisable;
     private Rigidbody2D rb;
-    private Animator animator;
+    [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer _renderer;
     public bool canMove;
     public bool isHidden = false;
@@ -21,15 +21,19 @@ public class CharacterMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     public void OnMove(float xDirection)
     {
+        animator.SetBool("isRunning", xDirection != 0 && canMove);
         if (!canMove) return;
 
+<<<<<<< HEAD
         if (xDirection != 0f)
             _renderer.flipX = xDirection > 0f;
+=======
+        if (xDirection != 0f) { _renderer.flipX = xDirection > 0f; }
+>>>>>>> refs/remotes/origin/main
 
         // TODO handle animation and sprite flipping
         Vector2 movement = new Vector2(xDirection, 0f) * moveSpeed * Time.deltaTime + new Vector2(0f, rb.velocity.y);

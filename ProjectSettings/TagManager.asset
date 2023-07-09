@@ -8,11 +8,12 @@ TagManager:
   - Interactable
   - InteractableObjects
   - PlayerAnim
+  - Inhabitant
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 

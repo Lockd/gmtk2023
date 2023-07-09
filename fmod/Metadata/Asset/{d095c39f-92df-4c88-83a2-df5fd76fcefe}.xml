@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{d095c39f-92df-4c88-83a2-df5fd76fcefe}">
+		<property name="assetPath">
+			<value>SFX/Granny/Scare/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{aca052dd-49c0-4da8-a212-0f809afd3ba2}</destination>
+		</relationship>
+	</object>
+</objects>

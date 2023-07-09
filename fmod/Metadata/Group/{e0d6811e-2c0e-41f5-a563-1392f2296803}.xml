@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{e0d6811e-2c0e-41f5-a563-1392f2296803}">
+		<property name="name">
+			<value>Granny</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{3caba579-df53-49fe-827c-2d93e0a0fe4c}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{837e5316-596f-46fe-9894-f71bbf51a69b}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{e93ff40e-a54c-45b6-92d7-057c9a5f2e3c}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{3caba579-df53-49fe-827c-2d93e0a0fe4c}">
+		<relationship name="effects">
+			<destination>{e499f9e4-35a7-46f9-81c9-7667f2b9cb05}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{837e5316-596f-46fe-9894-f71bbf51a69b}" />
+	<object class="MixerBusFader" id="{e499f9e4-35a7-46f9-81c9-7667f2b9cb05}" />
+</objects>

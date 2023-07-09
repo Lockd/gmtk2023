@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ItemType { Plant, Books, Clothes, Puddle, Dishes }
+
 [RequireComponent(typeof(BoxCollider2D))]
 public class GameObjective : MonoBehaviour
 {
+    [SerializeField] private ItemType itemType;
     [SerializeField] private float timeToComplete = 5f;
     [SerializeField] private float interactionRange = 5F;
     [SerializeField] private InventoryItem requiredItem;
@@ -41,6 +44,7 @@ public class GameObjective : MonoBehaviour
             hintText.SetActive(false);
             playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(false);
             playerAnim.SetTrigger(type);
+            playerAnim.SetBool(type, true);
 
             StartCoroutine(FinishTask());
         }
@@ -79,7 +83,33 @@ public class GameObjective : MonoBehaviour
         spriteRenderer.sprite = successImage;
         isComplete = true;
         completedObjectives.CheckGameCompletionStatus();
+        playerAnim.SetBool(type, false);
+        PlaySound();
 
         playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(true);
+    }
+
+    private void PlaySound()
+    {
+        switch (itemType)
+        {
+            case ItemType.Plant:
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Plants/Plants_Watering");
+                break;
+            case ItemType.Clothes:
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Clothes_Fold");
+                break;
+            case ItemType.Books:
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Books_Organise");
+                break;
+            case ItemType.Dishes:
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Dishes_Clean");
+                break;
+            case ItemType.Puddle:
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Puddle_Clean");
+                break;
+            default:
+                break;
+        }
     }
 }
