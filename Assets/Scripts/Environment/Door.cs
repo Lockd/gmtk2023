@@ -19,6 +19,8 @@ public class Door : MonoBehaviour
         // TODO play animation
         character.position = linkedDoor.transform.position;
 
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Door_Enter");
+
         CameraSwitcher.Instance.SetLookAt(linkedDoor.transform, character);
     }
 

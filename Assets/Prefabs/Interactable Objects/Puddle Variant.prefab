@@ -90,6 +90,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6997703343605007528, guid: 3c2970d0b1af7d945b813b83367734bc,
         type: 3}
+      propertyPath: itemType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997703343605007528, guid: 3c2970d0b1af7d945b813b83367734bc,
+        type: 3}
       propertyPath: errorMessage
       value: 
       objectReference: {fileID: 0}
@@ -107,6 +112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: successMessage
       value: Wooh, good job me
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997703343605007528, guid: 3c2970d0b1af7d945b813b83367734bc,
+        type: 3}
+      propertyPath: timeToComplete
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8045033975302518766, guid: 3c2970d0b1af7d945b813b83367734bc,
         type: 3}

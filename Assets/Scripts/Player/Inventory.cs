@@ -29,6 +29,8 @@ public class Inventory : MonoBehaviour
     {
         if (targetObject == null) return;
 
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Item_Pickup");
+
         AddItemToInventory(targetObject);
     }
 
