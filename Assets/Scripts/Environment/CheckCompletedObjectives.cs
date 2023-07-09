@@ -8,6 +8,8 @@ public class CheckCompletedObjectives : MonoBehaviour
 
     public Transform objectives;
 
+    public GameObject victoryScreen;
+
     public void CheckGameCompletionStatus()
     {
         bool completed = true;
@@ -23,8 +25,9 @@ public class CheckCompletedObjectives : MonoBehaviour
         else Debug.Log("Game Not Completed");
     }
 
-    public static void GameCompleted()
+    public void GameCompleted()
     {
+        Time.timeScale = 0f;
         SceneManager.LoadScene("Game Win");
     }
 }
