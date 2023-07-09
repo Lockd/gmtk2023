@@ -127,7 +127,7 @@ public class AIManager : MonoBehaviour
         // TODO add animator trigger here
         currentState = AIStates.Scared;
         pursuingTarget = false;
-        ReverseTargets();
+        // ReverseTargets();
     }
 
     private void ReverseTargets()

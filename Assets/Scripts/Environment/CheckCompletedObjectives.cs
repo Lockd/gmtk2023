@@ -8,7 +8,6 @@ public class CheckCompletedObjectives : MonoBehaviour
 
     public Transform objectives;
 
-    public GameObject victoryScreen;
 
     public void CheckGameCompletionStatus()
     {

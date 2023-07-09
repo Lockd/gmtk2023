@@ -8,25 +8,28 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Val/Val_TestMainMenu.unity
     guid: bb918322812b61a49858030244f6a262
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Val/Val_TestTextScene.unity
     guid: 45a8c46571f78234e8367fc56c6aa1a3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Val/Val_TestScene.unity
     guid: 0fd382cfeda23ae4abd659d0bd7d094a
-  - enabled: 1
-    path: Assets/Scenes/Build/Game Win.unity
-    guid: 2dd0c2b2e3cfff3489779d06000ada27
-  - enabled: 1
-    path: Assets/Scenes/Build/Main Game.unity
-    guid: 679748738ff9685438379dc3823610da
   - enabled: 1
     path: Assets/Scenes/Build/Main Menu.unity
     guid: a79f2c9197e4d3840b5304188895b199
   - enabled: 1
     path: Assets/Scenes/Build/Text Intro.unity
     guid: 0954056d9c06ec640a68225bed55cbf3
+  - enabled: 1
+    path: Assets/Scenes/Build/Main Game.unity
+    guid: 679748738ff9685438379dc3823610da
+  - enabled: 1
+    path: Assets/Scenes/Build/Game Over.unity
+    guid: 7aa6a2a117e5611409b79e3dfedc79c1
+  - enabled: 1
+    path: Assets/Scenes/Build/Game Win.unity
+    guid: 2dd0c2b2e3cfff3489779d06000ada27
   m_configObjects: {}
