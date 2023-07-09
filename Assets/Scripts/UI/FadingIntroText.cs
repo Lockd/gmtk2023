@@ -10,6 +10,7 @@ public class FadingIntroText : MonoBehaviour
     [SerializeField] private float finalWaitTime = 5f;
     [SerializeField] private float timeBetweenText = 1.5f;
     public List<Animator> sequence;
+    public bool sequenceCompleted;
     int i = 0;
 
     private void Start()
@@ -26,6 +27,7 @@ public class FadingIntroText : MonoBehaviour
             i++;
         }
         yield return new WaitForSeconds(finalWaitTime);
-        SceneManager.LoadScene(sceneToLoad);
+        sequenceCompleted = true;
+        //SceneManager.LoadScene(sceneToLoad);
     }
 }
