@@ -45,7 +45,7 @@ public class CharacterMovement : MonoBehaviour
         _renderer.flipX = (xDestination - transform.position.x) > 0;
         float length = Math.Abs(xDestination - transform.position.x);
         float duration = length / moveSpeed;
-        transform.DOMoveX(xDestination, duration).OnComplete(() => OnDestinationReached(destination));
+        transform.DOMoveX(xDestination, duration).SetEase(Ease.Linear).OnComplete(() => OnDestinationReached(destination));
     }
 
     private void OnDestinationReached(GameObject destination)
