@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 4337920088521613136, guid: 3ec2170021ab5bc4587f2dc4fc218fcf,
         type: 3}
       propertyPath: errorMessage
-      value: Seems like I need water
+      value: I can't let it die. Marlene loves it so much...
       objectReference: {fileID: 0}
     - target: {fileID: 4337920088521613136, guid: 3ec2170021ab5bc4587f2dc4fc218fcf,
         type: 3}

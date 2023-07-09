@@ -71,8 +71,21 @@ public class MainMenuBehaviour : MonoBehaviour
         Application.Quit();
     }
 
-    void LaunchGame()
+    private void LaunchGame()
     {
-        SceneManager.LoadSceneAsync("Text Intro");
+        StartCoroutine(LaunchGameCoroutine());
+    }
+
+    private IEnumerator LaunchGameCoroutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(.01f);
+            if (FMODUnity.RuntimeManager.HasBankLoaded("Master Bank"))
+            {
+                Debug.Log("Master Bank Loaded");
+                SceneManager.LoadScene("Text Intro", LoadSceneMode.Single);
+            }
+        }
     }
 }
