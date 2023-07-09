@@ -39,13 +39,10 @@ public class GameObjective : MonoBehaviour
         if (Inventory.Instance.inventory.Contains(requiredItem) || requiredItem == null)
         {
             hintText.SetActive(false);
-            if (successMessage != null) PlayerBubbles.Instance.AddBubble(successMessage);
-            spriteRenderer.sprite = successImage;
             playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(false);
             playerAnim.SetTrigger(type);
-            isComplete = true;
-            completedObjectives.CheckGameCompletionStatus();
-            StartCoroutine(AllowMovement());
+
+            StartCoroutine(FinishTask());
         }
         else
         {
@@ -75,9 +72,13 @@ public class GameObjective : MonoBehaviour
         }
     }
 
-    IEnumerator AllowMovement()
+    IEnumerator FinishTask()
     {
         yield return new WaitForSeconds(timeToComplete);
+        if (successMessage != null) PlayerBubbles.Instance.AddBubble(successMessage);
+        spriteRenderer.sprite = successImage;
+        isComplete = true;
+        completedObjectives.CheckGameCompletionStatus();
 
         playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(true);
     }

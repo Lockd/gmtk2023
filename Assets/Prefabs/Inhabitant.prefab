@@ -53,6 +53,7 @@ MonoBehaviour:
   accelerationSpeed: 0
   targetDoor: {fileID: 0}
   targetHidableObject: {fileID: 0}
+  targetObjective: {fileID: 0}
   _renderer: {fileID: 0}
   isHidden: 0
 --- !u!114 &2692462701572389021
@@ -67,8 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7548efe7efba8409d2b4f245d02145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterMovement: {fileID: 0}
   targets: []
+  backtrackingIndex: 0
 --- !u!50 &4868831330559155341
 Rigidbody2D:
   serializedVersion: 4
@@ -225,7 +226,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 40024ca7f98aa74458fc9feb744fb19f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36fcedc4f3c398a49a1ec4dd6b561d92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
