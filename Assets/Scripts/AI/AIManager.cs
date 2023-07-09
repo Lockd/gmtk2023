@@ -129,17 +129,21 @@ public class AIManager : MonoBehaviour
         while (true)
         {
             yield return wait;
+            Debug.Log("Checking line of sight.");
             if (player.GetComponent<CharacterMovement>().isHidden)
                 continue;
             Vector3 directionToPlayer = (player.transform.position - transform.position);
-            Vector2 lookingDirection = new Vector2(_renderer.flipX ? -1f : 1f, 0f);
+            Debug.Log($"Vector to Player: {directionToPlayer}");
+            Vector2 lookingDirection = new Vector2(_renderer.flipX ? 1f : -1f, 0f);
             float angleToPlayer = Vector2.Angle(lookingDirection, directionToPlayer);
+            Debug.Log($"Angle to player: {angleToPlayer}");
             if (angleToPlayer > FOVAngle / 2)
             {
                 continue;
             }
             if (directionToPlayer.magnitude < FOVDistance)
             {
+                Debug.Log("Granny is scared.");
                 AIManager.instance.ScareInhabitant();
             }
         }
