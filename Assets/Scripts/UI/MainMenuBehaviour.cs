@@ -12,9 +12,15 @@ public class MainMenuBehaviour : MonoBehaviour
 
     public Button backButton;
 
+    public Button creditsBackButton;
+
     public GameObject settingsPosition;
     public Animator menu;
     public Animator settings;
+    public Animator credits;
+
+
+    public Button creditsButton;
 
     public Animator lightImage;
 
@@ -23,7 +29,7 @@ public class MainMenuBehaviour : MonoBehaviour
     void Start()
     {
         playButton.onClick.AddListener(LaunchGame);
-
+        creditsButton.onClick.AddListener(OpenCreditssMenu);
         settingsButton.onClick.AddListener(OpenSettingssMenu);
     }
 
@@ -42,6 +48,22 @@ public class MainMenuBehaviour : MonoBehaviour
         settings.SetTrigger("FadeIn");
         lightImage.SetTrigger("FadeIn");
         backButton.enabled = true;
+    }
+
+    void OpenCreditssMenu()
+    {
+        menu.SetTrigger("FadeOut");
+        lightImage.SetTrigger("FadeOut");
+        credits.gameObject.SetActive(true);
+        StartCoroutine(ShowCredits());
+    }
+
+    IEnumerator ShowCredits()
+    {
+        yield return new WaitForSeconds(1.5f);
+        credits.SetTrigger("FadeIn");
+        lightImage.SetTrigger("FadeIn");
+        creditsBackButton.enabled = true;
     }
 
     void CloseGame()
