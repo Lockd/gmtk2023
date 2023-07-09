@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Broom
   m_EditorClassIdentifier: 
   itemName: Broom
-  UIImage: {fileID: 0}
+  UIImage: {fileID: 21300000, guid: f34d50aa1c8c9234db88c4a5a6bd93ac, type: 3}
