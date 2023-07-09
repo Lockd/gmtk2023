@@ -6,23 +6,23 @@ using TMPro;
 
 public class FadingIntroText : MonoBehaviour
 {
-    public List<string> textLines;
-    public TextMeshProUGUI text;
-
-    float nextTextChange = 0f;
-    float textChangeTime = 6.4f;
+    public List<Animator> sequence;
     int i = 0;
-    // Start is called before the first frame update
 
-    private void Update()
+    private void Start()
     {
-        if (Time.time > nextTextChange)
+        StartCoroutine(somecoroutine());
+    }
+
+    private IEnumerator somecoroutine()
+    {
+        while (i < sequence.Count)
         {
-            nextTextChange += textChangeTime;
-            if (i < textLines.Count)
-                text.text = textLines[i];
-            else SceneManager.LoadScene("Val_TestScene");
+            sequence[i].SetTrigger("FadeIn");
+            yield return new WaitForSeconds(1.5f);
             i++;
         }
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("Val_TestScene");
     }
 }
