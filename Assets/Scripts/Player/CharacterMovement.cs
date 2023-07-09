@@ -17,6 +17,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer _renderer;
     public bool canMove;
     public bool isHidden = false;
+    [SerializeField] private Collider2D _collider;
 
     private void Start()
     {
@@ -109,6 +110,7 @@ public class CharacterMovement : MonoBehaviour
         targetHidableObject.OnHide();
         canMove = false;
         isHidden = true;
+        _collider.isTrigger = true;
     }
 
     public void OnLeaveHidableObject()
@@ -117,5 +119,6 @@ public class CharacterMovement : MonoBehaviour
         targetHidableObject.OnLeave();
         canMove = true;
         isHidden = false;
+        _collider.isTrigger = false;
     }
 }
