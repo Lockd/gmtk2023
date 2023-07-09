@@ -102,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 6041855508801558577, guid: abe88822c1afbb74594ed54707973bc5,
         type: 3}
       propertyPath: successMessage
-      value: TODO
+      value: Such beautiful clothes deserve better than to lie on the floor.
       objectReference: {fileID: 0}
     - target: {fileID: 6728833357903539063, guid: abe88822c1afbb74594ed54707973bc5,
         type: 3}

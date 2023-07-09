@@ -44,7 +44,7 @@ PrefabInstance:
     - target: {fileID: 4337920088521613136, guid: 3ec2170021ab5bc4587f2dc4fc218fcf,
         type: 3}
       propertyPath: successMessage
-      value: Water for little fella
+      value: Don't you worry little plant. You will live now.
       objectReference: {fileID: 0}
     - target: {fileID: 4337920088521613136, guid: 3ec2170021ab5bc4587f2dc4fc218fcf,
         type: 3}
