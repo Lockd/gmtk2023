@@ -41,6 +41,7 @@ public class GameObjective : MonoBehaviour
             hintText.SetActive(false);
             playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(false);
             playerAnim.SetTrigger(type);
+            playerAnim.SetBool(type, true);
 
             StartCoroutine(FinishTask());
         }
@@ -79,6 +80,7 @@ public class GameObjective : MonoBehaviour
         spriteRenderer.sprite = successImage;
         isComplete = true;
         completedObjectives.CheckGameCompletionStatus();
+        playerAnim.SetBool(type, false);
 
         playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(true);
     }
