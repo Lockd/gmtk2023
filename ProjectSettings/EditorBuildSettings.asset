@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Val/Val_TestScene.unity
     guid: 0fd382cfeda23ae4abd659d0bd7d094a
+  - enabled: 1
+    path: Assets/Scenes/Build/Game Win.unity
+    guid: 2dd0c2b2e3cfff3489779d06000ada27
+  - enabled: 1
+    path: Assets/Scenes/Build/Main Game.unity
+    guid: 679748738ff9685438379dc3823610da
+  - enabled: 1
+    path: Assets/Scenes/Build/Main Menu.unity
+    guid: a79f2c9197e4d3840b5304188895b199
+  - enabled: 1
+    path: Assets/Scenes/Build/Text Intro.unity
+    guid: 0954056d9c06ec640a68225bed55cbf3
   m_configObjects: {}

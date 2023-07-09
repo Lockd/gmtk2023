@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckCompletedObjectives : MonoBehaviour
 {
@@ -18,12 +19,12 @@ public class CheckCompletedObjectives : MonoBehaviour
                 break;
             }
         }
-        if(completed) GameCompleted();
+        if (completed) GameCompleted();
         else Debug.Log("Game Not Completed");
     }
 
     public static void GameCompleted()
     {
-        Debug.Log("Game Completed");
+        SceneManager.LoadScene("Game Win");
     }
 }

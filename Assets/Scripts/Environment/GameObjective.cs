@@ -38,6 +38,7 @@ public class GameObjective : MonoBehaviour
         // TODO play correct animaion?
         if (Inventory.Instance.inventory.Contains(requiredItem) || requiredItem == null)
         {
+            hintText.SetActive(false);
             if (successMessage != null) PlayerBubbles.Instance.AddBubble(successMessage);
             spriteRenderer.sprite = successImage;
             playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(false);

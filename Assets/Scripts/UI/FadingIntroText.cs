@@ -6,6 +6,9 @@ using TMPro;
 
 public class FadingIntroText : MonoBehaviour
 {
+    [SerializeField] private string sceneToLoad = "Main Game";
+    [SerializeField] private float finalWaitTime = 5f;
+    [SerializeField] private float timeBetweenText = 1.5f;
     public List<Animator> sequence;
     int i = 0;
 
@@ -19,10 +22,10 @@ public class FadingIntroText : MonoBehaviour
         while (i < sequence.Count)
         {
             sequence[i].SetTrigger("FadeIn");
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(timeBetweenText);
             i++;
         }
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("Val_TestScene");
+        yield return new WaitForSeconds(finalWaitTime);
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
