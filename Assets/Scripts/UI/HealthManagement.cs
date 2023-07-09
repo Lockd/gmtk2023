@@ -54,7 +54,7 @@ public class HealthManagement : MonoBehaviour
 
     private void removeLive()
     {
-        liveContainer.GetChild(0).gameObject.SetActive(false);
+        Destroy(liveContainer.GetChild(0).gameObject);
     }
 
     private void GameOver()

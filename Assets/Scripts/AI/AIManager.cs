@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class AIManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class AIManager : MonoBehaviour
     public float FOVDistance = 10f;
     public float FOVAngle = 90f;
     private SpriteRenderer _renderer;
+    private bool isAlreadyScared = false;
 
 
     private int currentBacktrackingIndex;
@@ -53,10 +55,28 @@ public class AIManager : MonoBehaviour
                     PursueTarget();
                 break;
             case AIStates.Scared:
-                PursueTarget();
+                BeScared();
                 break;
 
         }
+    }
+
+    private void BeScared()
+    {
+        if (isAlreadyScared) return;
+        movementScript.animator.SetBool("haveNoticed", true);
+
+        DOTween.KillAll();
+        isAlreadyScared = true;
+
+        Invoke(nameof(UnScare), 5f);
+    }
+
+    private void UnScare()
+    {
+        currentState = AIStates.Idle;
+        isAlreadyScared = false;
+        movementScript.animator.SetBool("haveNoticed", false);
     }
 
     private void PursueTarget()
@@ -128,7 +148,6 @@ public class AIManager : MonoBehaviour
 
     private IEnumerator CheckLineOfSight()
     {
-
         WaitForSeconds wait = new WaitForSeconds(0.2f);
 
         while (true)
@@ -143,8 +162,9 @@ public class AIManager : MonoBehaviour
             {
                 continue;
             }
-            if (directionToPlayer.magnitude < FOVDistance)
+            if (directionToPlayer.magnitude < FOVDistance && currentState != AIStates.Scared)
             {
+                PlayerBubbles.Instance.AddBubble("Uh-oh, I am sorry, I should run!!!");
                 AIManager.instance.ScareInhabitant();
             }
         }
