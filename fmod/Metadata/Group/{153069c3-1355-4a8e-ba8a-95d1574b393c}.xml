@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{153069c3-1355-4a8e-ba8a-95d1574b393c}">
+		<property name="name">
+			<value>Granny Walking</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{37d61e3d-e921-492d-9b22-21b3792ace83}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{45ee1487-dcd2-47c6-ab44-a9c5b34ef077}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{e0d6811e-2c0e-41f5-a563-1392f2296803}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{37d61e3d-e921-492d-9b22-21b3792ace83}">
+		<relationship name="effects">
+			<destination>{a2c555e1-eea2-4dee-9123-0f88b59ea376}</destination>
+			<destination>{5f82f53f-b950-4568-9ac3-1603a4883db5}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{45ee1487-dcd2-47c6-ab44-a9c5b34ef077}" />
+	<object class="MixerBusFader" id="{a2c555e1-eea2-4dee-9123-0f88b59ea376}" />
+	<object class="MixerSend" id="{5f82f53f-b950-4568-9ac3-1603a4883db5}">
+		<property name="level">
+			<value>-18</value>
+		</property>
+		<property name="inputFormat">
+			<value>2</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{1cdfe1ff-430e-4a28-a2fa-0446b957821e}</destination>
+		</relationship>
+	</object>
+</objects>

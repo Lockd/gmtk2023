@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3e4c767c-cc9a-4e74-86d4-548047c99102}">
+		<property name="assetPath">
+			<value>SFX/Environment/Books_Organise.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.81077083333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{aca052dd-49c0-4da8-a212-0f809afd3ba2}</destination>
+		</relationship>
+	</object>
+</objects>

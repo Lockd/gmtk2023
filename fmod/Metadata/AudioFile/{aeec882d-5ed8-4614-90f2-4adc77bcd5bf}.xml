@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{aeec882d-5ed8-4614-90f2-4adc77bcd5bf}">
+		<property name="assetPath">
+			<value>SFX/Player/Player_Unhide.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5219374999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{aca052dd-49c0-4da8-a212-0f809afd3ba2}</destination>
+		</relationship>
+	</object>
+</objects>
