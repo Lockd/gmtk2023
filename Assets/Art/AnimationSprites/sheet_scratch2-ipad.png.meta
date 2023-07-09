@@ -1,0 +1,655 @@
+fileFormatVersion: 2
+guid: f798d9b95b7d0ac4581884e9f70b79c3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_0
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 1907
+        width: 154
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48098c8fc5bf7542927e8ca6289a766
+      internalID: 1363077324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_1
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1764
+        width: 330
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b374c354cf7a4f4bbdf8d3d174ef149
+      internalID: 10989806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_2
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 1764
+        width: 356
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6720512c05940f408435e7e24051bd4
+      internalID: 1085311580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_3
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 1723
+        width: 424
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edf602f80d272347ac85b4b1f2fe264
+      internalID: -845763080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1668
+        width: 73
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ba6e88f0c7967409bdf20fba9054ea
+      internalID: -2109396940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_5
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1665
+        width: 76
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677f061a1de55694ca0e3b20a0c85c6f
+      internalID: 633304457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_6
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1395
+        width: 308
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43dafae5bd6e06a4fa71376b5d29f37d
+      internalID: 512244857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1385
+        width: 292
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a117614324f9a44ba89ed1d138b541
+      internalID: 729441146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_8
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1428
+        width: 358
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15830c5252ba9a34abd0258a2cc09751
+      internalID: 619124920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_9
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 1388
+        width: 308
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698ce368d058823439df25b19c959e35
+      internalID: -143013411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_10
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1394
+        width: 272
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61980380aaecf7c46b97f3e869683c85
+      internalID: 1192035836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_11
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 1408
+        width: 321
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976d8275d534f4a4391d082fe0feb3d9
+      internalID: -1538648319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_12
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1108
+        width: 392
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184741a7cfde77e4da9e5dbe95178f9e
+      internalID: -1100138871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_13
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1112
+        width: 360
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d00b768d083d6b4280da8052cc7d77c
+      internalID: 173268105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_14
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1055
+        width: 336
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d15e050aaef5048b300da645397ee1
+      internalID: -356975567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_15
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 1047
+        width: 312
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359b95b592a9c4b4ebc5caac6d94ff7e
+      internalID: 1553369230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_16
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 1027
+        width: 432
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7417ae0efe65a714eb3e723b1608ef6e
+      internalID: 1625309811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_17
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 956
+        width: 45
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d865dd8b9792f984a888f975ec3e992b
+      internalID: -1595002724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_18
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 621
+        width: 324
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3cccf075512484ebc5c8c7bd237708
+      internalID: 405977562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_19
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 593
+        width: 257
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9923ae5f5e78254ab9fa82e457f392c
+      internalID: -539707376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_20
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 592
+        width: 308
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42b603925aa4ef4983ad9a5071e86a9
+      internalID: 1501604852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_21
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 592
+        width: 316
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347bfb8294b565542baea3c6aaaef60c
+      internalID: -94836290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_22
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 588
+        width: 278
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627d152aa0437d24ca13d5d601d02b13
+      internalID: -1229482808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_scratch2-ipad_23
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 588
+        width: 276
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ceda9f7e9af7e840b02698504e01d8b
+      internalID: 1472880318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b4d7942e2a1ee5b448f6c64abbb724ca
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sheet_scratch2-ipad_0: 1363077324
+      sheet_scratch2-ipad_1: 10989806
+      sheet_scratch2-ipad_10: 1192035836
+      sheet_scratch2-ipad_11: -1538648319
+      sheet_scratch2-ipad_12: -1100138871
+      sheet_scratch2-ipad_13: 173268105
+      sheet_scratch2-ipad_14: -356975567
+      sheet_scratch2-ipad_15: 1553369230
+      sheet_scratch2-ipad_16: 1625309811
+      sheet_scratch2-ipad_17: -1595002724
+      sheet_scratch2-ipad_18: 405977562
+      sheet_scratch2-ipad_19: -539707376
+      sheet_scratch2-ipad_2: 1085311580
+      sheet_scratch2-ipad_20: 1501604852
+      sheet_scratch2-ipad_21: -94836290
+      sheet_scratch2-ipad_22: -1229482808
+      sheet_scratch2-ipad_23: 1472880318
+      sheet_scratch2-ipad_3: -845763080
+      sheet_scratch2-ipad_4: -2109396940
+      sheet_scratch2-ipad_5: 633304457
+      sheet_scratch2-ipad_6: 512244857
+      sheet_scratch2-ipad_7: 729441146
+      sheet_scratch2-ipad_8: 619124920
+      sheet_scratch2-ipad_9: -143013411
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

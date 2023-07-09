@@ -23,6 +23,7 @@ public class HideableObject : MonoBehaviour
 
     public void OnHide()
     {
+
         _renderer.color = hiddenColor;
     }
 

@@ -36,6 +36,7 @@ public class Inventory : MonoBehaviour
     public void AddItemToInventory(PickUpObject itemToAdd)
     {
         // TODO should not be game object, use SO for rendering UI
+        transform.GetChild(0).GetComponent<Animator>().SetTrigger("Take");
         inventory.Add(itemToAdd.inventoryItem);
         InventoryUI.Instance.AddItemToUI(itemToAdd.inventoryItem);
         Destroy(itemToAdd.gameObject);

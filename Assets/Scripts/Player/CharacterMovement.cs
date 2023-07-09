@@ -67,6 +67,12 @@ public class CharacterMovement : MonoBehaviour
         targetDoor = door;
     }
 
+    public void ChangeMoveAbility(bool value)
+    {
+        rb.velocity = Vector2.zero;
+        canMove = value;
+    }
+
     public void OnEnterDoor()
     {
         if (targetDoor == null) return;
@@ -103,7 +109,7 @@ public class CharacterMovement : MonoBehaviour
     public void OnHide()
     {
         if (targetHidableObject == null) return;
-
+        rb.velocity = Vector2.zero;
         animator.SetBool("isHidden", true);
         targetHidableObject.OnHide();
         canMove = false;

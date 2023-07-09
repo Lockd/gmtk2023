@@ -50,6 +50,6 @@ public class MainMenuBehaviour : MonoBehaviour
 
     void LaunchGame()
     {
-        SceneManager.LoadScene("Val_TestScene");
+        SceneManager.LoadSceneAsync("Val_TestTextScene");
     }
 }

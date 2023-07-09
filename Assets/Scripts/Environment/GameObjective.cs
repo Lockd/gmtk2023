@@ -17,8 +17,16 @@ public class GameObjective : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     public bool isComplete = false;
 
+    public string type;
+
+    CheckCompletedObjectives completedObjectives;
+
+    Animator playerAnim;
+
     void Start()
     {
+        playerAnim = GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<Animator>();
+        completedObjectives = GameObject.Find("Character").GetComponent<CheckCompletedObjectives>();
         boxCollider = GetComponent<BoxCollider2D>();
         boxCollider.size = new Vector2(interactionRange, 1f);
         hintText.SetActive(false);
@@ -32,7 +40,11 @@ public class GameObjective : MonoBehaviour
         {
             if (successMessage != null) PlayerBubbles.Instance.AddBubble(successMessage);
             spriteRenderer.sprite = successImage;
+            playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(false);
+            playerAnim.SetTrigger(type);
             isComplete = true;
+            completedObjectives.CheckGameCompletionStatus();
+            StartCoroutine(AllowMovement());
         }
         else
         {
@@ -60,5 +72,12 @@ public class GameObjective : MonoBehaviour
 
             PlayerBubbles.Instance.ClearBubbles();
         }
+    }
+
+    IEnumerator AllowMovement()
+    {
+        yield return new WaitForSeconds(timeToComplete);
+
+        playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(true);
     }
 }
