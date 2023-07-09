@@ -28,12 +28,7 @@ public class CharacterMovement : MonoBehaviour
         animator.SetBool("isRunning", xDirection != 0 && canMove);
         if (!canMove) return;
 
-<<<<<<< HEAD
-        if (xDirection != 0f)
-            _renderer.flipX = xDirection > 0f;
-=======
         if (xDirection != 0f) { _renderer.flipX = xDirection > 0f; }
->>>>>>> refs/remotes/origin/main
 
         // TODO handle animation and sprite flipping
         Vector2 movement = new Vector2(xDirection, 0f) * moveSpeed * Time.deltaTime + new Vector2(0f, rb.velocity.y);
@@ -43,8 +38,9 @@ public class CharacterMovement : MonoBehaviour
 
     internal void GoTo(GameObject destination)
     {
+        animator.SetBool("isRunning", true);
         float xDestination = destination.transform.position.x;
-        _renderer.flipX = (xDestination - transform.position.x) < 0;
+        _renderer.flipX = (xDestination - transform.position.x) > 0;
         float length = Math.Abs(xDestination - transform.position.x);
         float duration = length / moveSpeed;
         transform.DOMoveX(xDestination, duration).OnComplete(() => OnDestinationReached(destination));
@@ -52,6 +48,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnDestinationReached(GameObject destination)
     {
+        animator.SetBool("isRunning", false);
         Door door = destination.GetComponent<Door>();
         if (door != null)
             door.OnEnter(transform);
