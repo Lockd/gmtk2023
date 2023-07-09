@@ -26,7 +26,7 @@ public class HealthManagement : MonoBehaviour
         Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Music_Track_01");
         Music.start();
         Music.release();
-        Music.setParameterByName("Heart_Level", currentHealth);
+        Music.setParameterByName("Heart_Level", musicLevel);
     }
 
     private void OnDestroy()
