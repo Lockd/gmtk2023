@@ -10,37 +10,38 @@ public class MainMenuBehaviour : MonoBehaviour
 
     public Button settingsButton;
 
-    public GameObject settingsPosition;
+    public Button backButton;
 
-    public Camera mainCamera;
+    public GameObject settingsPosition;
+    public Animator menu;
+    public Animator settings;
+
+    public Animator lightImage;
 
     public GameObject settingsUI;
-
-    MenuCameraMovement thisCamera;
     // Start is called before the first frame update
     void Start()
     {
         playButton.onClick.AddListener(LaunchGame);
 
         settingsButton.onClick.AddListener(OpenSettingssMenu);
-
-        thisCamera = mainCamera.GetComponent<MenuCameraMovement>();
     }
 
 
     void OpenSettingssMenu()
     {
-        //settingsUI.SetActive(true);
-        //gameObject.SetActive(false);
-        //mainCamera.transform.position = new Vector3(settingsPosition.transform.position.x, settingsPosition.transform.position.y, mainCamera.transform.position.z);
-        thisCamera.isMoving = true;
-        thisCamera.moveTo = settingsPosition;
-        thisCamera.direction = 1;
-        /*
-        savesMenu.SetActive(true);
-        gameObject.SetActive(false);
-        */
+        menu.SetTrigger("FadeOut");
+        lightImage.SetTrigger("FadeOut");
+        settings.gameObject.SetActive(true);
+        StartCoroutine(ShowSettings());
+    }
 
+    IEnumerator ShowSettings()
+    {
+        yield return new WaitForSeconds(1.5f);
+        settings.SetTrigger("FadeIn");
+        lightImage.SetTrigger("FadeIn");
+        backButton.enabled = true;
     }
 
     void CloseGame()

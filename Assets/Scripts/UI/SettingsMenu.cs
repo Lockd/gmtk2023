@@ -7,7 +7,10 @@ public class SettingsMenu : MonoBehaviour
 {
     public Button backButton;
 
-    public GameObject menuUI;
+    public Animator menu;
+    public Animator settings;
+
+    public Animator lightImage;
 
     public GameObject menuPosition;
 
@@ -17,15 +20,25 @@ public class SettingsMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        thisCamera = mainCamera.GetComponent<MenuCameraMovement>();
         backButton.onClick.AddListener(ReturnToMainMenu);
     }
 
     void ReturnToMainMenu()
     {
-        thisCamera.isMoving = true;
-        thisCamera.moveTo = menuPosition;
-        thisCamera.direction = -1;
+        backButton.enabled = false;
+        settings.SetTrigger("FadeOut");
+        lightImage.SetTrigger("FadeOut");
+        StartCoroutine(ShowMenu());
+    }
+
+
+
+    IEnumerator ShowMenu()
+    {
+        yield return new WaitForSeconds(1.5f);
+        menu.SetTrigger("FadeIn");
+        lightImage.SetTrigger("FadeIn");
+
+        gameObject.SetActive(false);
     }
 }
