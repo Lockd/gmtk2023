@@ -100,6 +100,10 @@ public class AIManager : MonoBehaviour
 
     public void ScareInhabitant()
     {
+        HealthManagement.Instance.OnChnageHealth();
+
+        int scareIndex = HealthManagement.Instance.maxHealth - HealthManagement.Instance.currentHealth;
+        FMODUnity.RuntimeManager.PlayOneShot($"event:/SFX/Granny/Scare/Granny_Scare_0{scareIndex}");
         // TODO add animator trigger here
         currentState = AIStates.Scared;
         pursuingTarget = false;

@@ -13,7 +13,7 @@ public class CharacterMovement : MonoBehaviour
     public GameObjective targetObjective;
     private Collider2D colliderToDisable;
     private Rigidbody2D rb;
-    [SerializeField] private Animator animator;
+    public Animator animator;
     [SerializeField] private SpriteRenderer _renderer;
     public bool canMove;
     public bool isHidden = false;
@@ -39,6 +39,7 @@ public class CharacterMovement : MonoBehaviour
     internal void GoTo(GameObject destination)
     {
         animator.SetBool("isRunning", true);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Granny/Granny_Footsteps");
         float xDestination = destination.transform.position.x;
         _renderer.flipX = (xDestination - transform.position.x) > 0;
         float length = Math.Abs(xDestination - transform.position.x);

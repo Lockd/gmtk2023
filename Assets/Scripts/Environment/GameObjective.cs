@@ -71,8 +71,6 @@ public class GameObjective : MonoBehaviour
         {
             hintText.SetActive(false);
             movement.SetTargetGameObjective(null);
-
-            PlayerBubbles.Instance.ClearBubbles();
         }
     }
 
