@@ -20,6 +20,8 @@ public class PlayerBubbles : MonoBehaviour
     {
         text.gameObject.SetActive(false);
         textContainer.SetActive(false);
+
+        AddBubble("Alright, just need to clean the house and hide in the lamps when Marlene might see me.");
     }
 
     public void AddBubble(string message)

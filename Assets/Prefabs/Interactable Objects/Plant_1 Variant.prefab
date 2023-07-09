@@ -109,7 +109,7 @@ PrefabInstance:
     - target: {fileID: 8618054177432354781, guid: 3ec2170021ab5bc4587f2dc4fc218fcf,
         type: 3}
       propertyPath: m_text
-      value: water [E]
+      value: Water [E]
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

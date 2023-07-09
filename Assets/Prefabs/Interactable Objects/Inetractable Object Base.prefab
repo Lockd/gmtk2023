@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5420772566518350803
@@ -117,7 +117,7 @@ Transform:
   - {fileID: 6581204255412929520}
   - {fileID: 4937535588541739953}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &4481796900040614057
 BoxCollider2D:
@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9f5cf4b9286d64abbaf7c54ec4045d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: 0
   timeToComplete: 5
   interactionRange: 5
   requiredItem: {fileID: 11400000, guid: 2693bfd548ccfa445ae81bb6d97064f0, type: 2}
@@ -185,6 +186,7 @@ MonoBehaviour:
   hintText: {fileID: 9169923639959338088}
   spriteRenderer: {fileID: 8045033975302518766}
   isComplete: 0
+  type: 
 --- !u!1001 &7636225168777039550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,6 +304,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850268513128426139, guid: fbc64077355ceba41bb66cc67ec02e18,
+        type: 3}
+      propertyPath: m_text
+      value: Water [E]
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
