@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType { Plant, Books, Clothes, Puddle, Dishes }
+public enum ItemType { Plant, Books, Clothes, Puddle, Dishes, Web }
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class GameObjective : MonoBehaviour
@@ -45,7 +45,7 @@ public class GameObjective : MonoBehaviour
             playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(false);
             playerAnim.SetTrigger(type);
             playerAnim.SetBool(type, true);
-
+            PlaySound();
             StartCoroutine(FinishTask());
         }
         else
@@ -79,12 +79,11 @@ public class GameObjective : MonoBehaviour
     IEnumerator FinishTask()
     {
         yield return new WaitForSeconds(timeToComplete);
-        if (successMessage != null) PlayerBubbles.Instance.AddBubble(successMessage);
+        if (successMessage.Length > 0) PlayerBubbles.Instance.AddBubble(successMessage);
         spriteRenderer.sprite = successImage;
         isComplete = true;
         completedObjectives.CheckGameCompletionStatus();
         playerAnim.SetBool(type, false);
-        PlaySound();
 
         playerAnim.transform.parent.gameObject.GetComponent<CharacterMovement>().ChangeMoveAbility(true);
     }
@@ -107,6 +106,9 @@ public class GameObjective : MonoBehaviour
                 break;
             case ItemType.Puddle:
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Puddle_Clean");
+                break;
+            case ItemType.Web:
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Brush/Brush_Spiderweb");
                 break;
             default:
                 break;
