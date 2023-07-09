@@ -2787,6 +2787,11 @@ PrefabInstance:
       objectReference: {fileID: 188039565722000663}
     - target: {fileID: 2692462701572389021, guid: 445067c00a2bfd44b90593698de9c783,
         type: 3}
+      propertyPath: backtrackingIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692462701572389021, guid: 445067c00a2bfd44b90593698de9c783,
+        type: 3}
       propertyPath: targets.Array.size
       value: 1
       objectReference: {fileID: 0}
